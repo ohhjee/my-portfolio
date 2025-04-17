@@ -146,7 +146,7 @@ onMounted(() => {
           <div
             v-for="(tools, index) in toolKitIcon"
             :key="index"
-            class="tw:text-xl tw:bg-white/5 tw:w-fit tw:py-4 tw:px-10 tw:rounded-2xl tw:last:col-span-1 tw:border tw:hover:shadow-[0px_0px_5px] tw:shadow-gray-100 tw:hover:transition-all"
+            class="tw:text-xl tw:bg-white/5 tw:w-fit tw:py-4 tw:px-10 tw:rounded-2xl tw:last:col-span-1 tw:hover:shadow-[0px_0px_5px] tw:hover:shadow-gray-100 tw:hover:transition-all"
           >
             <iconify :icon="tools" class="tw:text-white/20 tw:size-8" />
           </div>
