@@ -114,8 +114,14 @@ onMounted(() => {
           web experiences that drive results.
         </div>
       </section>
-      <section class="tw:my-10">
-        <div class="tw:text-3xl tw:font-extrabold tw:mb-8">My Toolkit</div>
+      <section
+        class="tw:py-10 tw:max-md:flex tw:items-center tw:justify-between tw:flex-col tw:text-left"
+      >
+        <div
+          class="tw:text-3xl tw:font-extrabold tw:mb-8 tw:!text-left tw:flex tw:items-start tw:w-full"
+        >
+          My Toolkit
+        </div>
         <div
           class="tw:grid tw:min-md:grid-cols-3 tw:min-sm:grid-cols-2 tw:gap-5 tw:font-bold tw:grid-cols-1"
         >
@@ -135,12 +141,12 @@ onMounted(() => {
           </div> -->
         </div>
         <div
-          class="tw:grid tw:min-md:grid-cols-7 tw:min-sm:grid-cols-2 tw:gap-5 tw:font-bold tw:grid-cols-2"
+          class="tw:grid tw:lg:grid-cols-6 tw:xl:grid-cols-7 tw:min-sm:grid-cols-5 tw:gap-5 tw:font-bold tw:grid-cols-2 tw:place-content-center tw:w-fit"
         >
           <div
             v-for="(tools, index) in toolKitIcon"
             :key="index"
-            class="tw:text-xl tw:bg-white/5 tw:w-fit tw:py-4 tw:px-10 tw:rounded-2xl tw:last:col-span-1 tw:hover:shadow-[0px_0px_5px] tw:shadow-gray-100 tw:hover:transition-all"
+            class="tw:text-xl tw:bg-white/5 tw:w-fit tw:py-4 tw:px-10 tw:rounded-2xl tw:last:col-span-1 tw:border tw:hover:shadow-[0px_0px_5px] tw:shadow-gray-100 tw:hover:transition-all"
           >
             <iconify :icon="tools" class="tw:text-white/20 tw:size-8" />
           </div>
