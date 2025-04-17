@@ -63,12 +63,12 @@ onMounted(() => {
       </div>
       <div class="tw:min-ml:max-w-xl tw:max-lg:w-full">
         <div
-          class="tw:min-lg:text-6xl tw:max-lg:text-2xl tw:font-extrabold tw:text-shadow-lg"
+          class="tw:min-lg:text-6xl tw:max-lg:text-3xl tw:font-extrabold tw:text-shadow-lg"
         >
           I am <span class="tw:tracking-wide"> Oluwagbenga </span>
         </div>
         <div
-          class="tw:min-lg:text-6xl tw:max-lg:text-2xl textShadow tw:font-extrabold"
+          class="tw:min-lg:text-6xl tw:max-lg:text-3xl textShadow tw:font-extrabold"
         >
           A Web Developer
         </div>
