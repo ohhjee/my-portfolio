@@ -1,0 +1,63 @@
+@import "tailwindcss" prefix(tw);
+@plugin "daisyui" {
+  themes: light --default;
+}
+
+body {
+  background-color: rgb(24 9.8% 10%);
+  color: white;
+  min-height: 100vh;
+}
+
+@theme {
+  --color-blue: #1e90ff;
+  --color-lightblue: #87ceeb;
+  --color-orangeYellow: #ffc107;
+  --color-orangeRed: #ff4500;
+  --color-brown: #ffa07a;
+  --color-yellow: #ffa07a;
+  --font-dancing: "Dancing Script", cursive;
+  --font-underdog: "Underdog", system-ui;
+  --font-default: "Geist", sans-serif;
+
+  --animate-wiggle: wiggle 1s ease-in-out infinite;
+  @keyframes wiggle {
+    0%,
+    100% {
+      transform: rotate(-20deg);
+    }
+    50% {
+      transform: rotate(20deg);
+    }
+  }
+}
+@layer base {
+  html {
+    @apply tw:font-default;
+  }
+}
+
+.textShadow {
+  font-size: 50px;
+  background: linear-gradient(
+    to right,
+    #1e90ff,
+    #87ceeb,
+    #ffc107,
+    #ffa07a,
+    #f4c430,
+    #ffffff,
+    #ff4500
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.toolkit {
+  background: linear-gradient(
+    to right,
+    /* #1e90ff, */ #87ceeb,
+    /* #ffc107, #ffa07a, */ /* #f4c430, */ #ffffff /* #ff4500 */
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+}
