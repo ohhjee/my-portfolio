@@ -11,14 +11,6 @@ const colors = [
   "#ffffff",
 ];
 
-const toolKit = [
-  "Vuejs",
-  "Laravel/php",
-  "Typescript",
-  "Git",
-  "Javascript",
-  "Css",
-];
 const toolKitIcon = [
   "teenyicons:typescript-outline",
   "famicons:logo-laravel",
@@ -40,8 +32,8 @@ onMounted(() => {
 <template>
   <div class="tw:max-sm:p-4 tw:min-sm:max-w-8/12 tw:mx-auto">
     <div class="tw:flex tw:items-center tw:justify-between tw:py-3">
-      <router-link to="#" class="tw:font-dancing tw:text-white tw:text-4xl"
-        >Ohhjee</router-link
+      <a href="/" class="tw:font-dancing tw:text-white tw:text-4xl link"
+        >Ohhjee</a
       >
 
       <div>
@@ -86,14 +78,16 @@ onMounted(() => {
               class="tw:size-full"
             />
           </div>
-          <div class="tw:text-lg tw:max-w-sm tw:max-md:text-center">
+          <div
+            class="tw:min-sm:text-lg tw:text-sm tw:max-w-sm tw:max-md:text-center"
+          >
             I am passionate about crafting solid and scalable products with
             great user experiences.
           </div>
         </div>
       </div>
       <section>
-        <div class="tw:text-xl tw:min-lg:text-justify">
+        <div class="tw:min-sm:text-lg tw:text-sm">
           I craft seamless, user-focused web applications by blending dynamic
           front-ends with robust backends. With expertise in
           <span class="tw:text-lightblue tw:font-bold tw:link">Vue.js</span> for
@@ -118,35 +112,18 @@ onMounted(() => {
         class="tw:py-10 tw:max-md:flex tw:items-center tw:justify-between tw:flex-col tw:text-left"
       >
         <div
-          class="tw:text-3xl tw:font-extrabold tw:mb-8 tw:!text-left tw:flex tw:items-start tw:w-full"
+          class="tw:text-3xl tw:font-extrabold tw:mb-8 tw:text-center tw:min-md:text-left tw:w-full"
         >
           My Toolkit
         </div>
+
         <div
-          class="tw:grid tw:min-md:grid-cols-3 tw:min-sm:grid-cols-2 tw:gap-5 tw:font-bold tw:grid-cols-1"
-        >
-          <!-- <div
-            v-for="(tools, index) in toolKit"
-            :key="index"
-            class="tw:text-xl toolkit"
-          >
-            {{ tools }}
-          </div> -->
-          <!-- <div
-            v-for="(tools, index) in toolKitIcon"
-            :key="index"
-            class="tw:text-xl toolkit tw:bg-gray-100 tw:shadow-2xl"
-          >
-            <iconify :icon="tools" class="tw:text-white" />
-          </div> -->
-        </div>
-        <div
-          class="tw:grid tw:lg:grid-cols-6 tw:xl:grid-cols-7 tw:min-sm:grid-cols-5 tw:gap-5 tw:font-bold tw:grid-cols-2 tw:place-content-center tw:w-fit"
+          class="tw:grid tw:lg:grid-cols-6 tw:xl:grid-cols-7 tw:sm:grid-cols-4 tw:gap-5 tw:font-bold tw:grid-cols-2 tw:place-content-center tw:w-fit"
         >
           <div
             v-for="(tools, index) in toolKitIcon"
             :key="index"
-            class="tw:text-xl tw:bg-white/5 tw:w-fit tw:py-4 tw:px-10 tw:rounded-2xl tw:last:col-span-1 tw:hover:shadow-[0px_0px_5px] tw:hover:shadow-gray-100 tw:hover:transition-all"
+            class="tw:text-lg tw:bg-white/5 tw:w-fit tw:py-4 tw:px-10 tw:rounded-2xl tw:last:col-span-1 tw:hover:shadow-[0px_0px_5px] tw:hover:shadow-gray-100 tw:hover:transition-all"
           >
             <iconify :icon="tools" class="tw:text-white/20 tw:size-8" />
           </div>
