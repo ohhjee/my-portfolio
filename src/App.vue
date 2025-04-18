@@ -1,16 +1,4 @@
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
-const textColor = ref<string[]>();
-const colors = [
-  "#1e90ff",
-  "#87ceeb",
-  "#ffc107",
-  "#ffa07a",
-  "#f4c430",
-  "#ff4500",
-  "#ffffff",
-];
-
 const toolKitIcon = [
   "teenyicons:typescript-outline",
   "famicons:logo-laravel",
@@ -20,14 +8,6 @@ const toolKitIcon = [
   "akar-icons:css-fill",
   "akar-icons:php-fill",
 ];
-
-const getRandomColor = () => {
-  return colors[Math.floor(Math.random() * colors.length)];
-};
-
-onMounted(() => {
-  textColor.value = toolKit.map(() => getRandomColor());
-});
 </script>
 <template>
   <div class="tw:max-sm:p-4 tw:min-sm:max-w-8/12 tw:mx-auto">
