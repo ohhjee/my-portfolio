@@ -41,6 +41,8 @@ const works = [
       "I built the complete frontend architecture, styling, and component logic.",
     languages: ["Vue.js", "Vuetify", "Typescript"],
     icons: ["devicon:vuejs", "devicon:vuetify", "devicon:typescript"],
+    img: "/img/trift.png",
+    link: "https://play.google.com/store/apps/details?id=com.playthriftowin",
   },
 ] as IsWork[];
 
@@ -186,33 +188,55 @@ onMounted(() => {
         Projects
       </div>
       <div
-        class="tw:grid tw:min-md:grid-cols-2 tw:gap-4 tw:my-12 tw:last:my-0 tw:group work-item"
+        class="tw:grid tw:min-lg:grid-cols-2 tw:gap-4 tw:my-12 tw:last:my-0 tw:group work-item"
         v-for="(work, index) in works"
         :key="index"
         :style="{ '--animation-delay': `${index * 0.5}s` }"
       >
         <!-- Card Section -->
-        <div
-          class="tw:card tw:bg-white tw:p-2 tw:relative tw:overflow-hidden tw:hover:shadow-xl tw:transition-transform tw:duration-300 tw:group/card"
-        >
-          <img :src="work.img" alt="" />
+        <div>
           <div
-            class="tw:absolute tw:h-full tw:w-full tw:bg-black/50 tw:top-0 tw:left-0 tw:group-hover/card:opacity-100 tw:opacity-0 tw:transition-opacity tw:duration-300 tw:overflow-hidden"
+            class="tw:bg-white tw:p-2 tw:relative tw:min-md:overflow-hidden tw:hover:min-md:shadow-xl tw:rounded-lg tw:transition-transform tw:duration-300 tw:h-64 tw:group/card"
           >
-            <div class="tw:flex tw:items-center tw:justify-center tw:h-full">
-              <div
-                class="tw:ring-2 tw:ring-lightblue tw:p-1 tw:rounded-full tw:z-10 tw:transition-all tw:duration-300"
-              >
-                <a :href="work.link" target="_blank" rel="noopener noreferrer">
-                  <iconify
-                    icon="mdi:arrow-up"
-                    width="30"
-                    height="30"
-                    class="tw:bg-lightblue tw:rounded-full tw:group-hover/card:bg-blue-200 tw:transition-transform tw:duration-300 tw:rotate-45"
-                  />
-                </a>
+            <div class="tw:overflow-hidden tw:h-full">
+              <img
+                :src="work.img"
+                alt=""
+                class="tw:h-full tw:object-contain tw:w-full"
+              />
+            </div>
+            <div
+              class="tw:min-md:absolute tw:h-full tw:w-full tw:bg-black/50 tw:top-0 tw:left-0 tw:group-hover/card:min-md:opacity-100 tw:opacity-0 tw:transition-opacity tw:duration-300 tw:overflow-hidden"
+            >
+              <div class="tw:flex tw:items-center tw:justify-center tw:h-full">
+                <div
+                  class="tw:ring-2 tw:ring-lightblue tw:p-1 tw:rounded-full tw:z-10 tw:transition-all tw:duration-300"
+                >
+                  <a
+                    :href="work.link"
+                    target="_blank"
+                    class="tw:group-hover/card:pointer-events-auto tw:pointer-events-none"
+                  >
+                    <iconify
+                      icon="mdi:arrow-up"
+                      width="30"
+                      height="30"
+                      class="tw:bg-lightblue tw:rounded-full tw:group-hover/card:bg-blue-200 tw:transition-transform tw:duration-300 tw:rotate-45"
+                    />
+                  </a>
+                </div>
               </div>
             </div>
+          </div>
+          <div class="tw:mt-3 tw:inline-flex tw:min-md:hidden">
+            <a
+              :href="work.link"
+              class="tw:text-blue-300"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <iconify icon="solar:link-outline" width="24" height="24" />
+            </a>
           </div>
         </div>
 
@@ -256,16 +280,16 @@ onMounted(() => {
           </div>
 
           <!-- Card Body -->
-          <div class="card-body tw:py-4">
+          <div class="card-body">
             <div
-              class="hover:tw:text-gray-800 tw:transition-colors tw:duration-200"
+              class="hover:tw:text-gray-800 tw:transition-colors tw:duration-200 tw:my-4"
             >
               {{ work.description }}
             </div>
 
             <!-- Card Language Tags -->
             <div
-              class="card-language tw:mt-2 tw:space-x-3 tw:space-y-3 group/lang"
+              class="card-language tw:space-x-3 tw:max-sm:space-y-4 group/lang"
             >
               <span
                 v-for="(lang, i) in work.languages"
