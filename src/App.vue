@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from "vue";
+// import { Footer } from "@/components/app";
+
+import { Footer } from "./components/app";
 import type { IsWork } from "@/definition";
 
 const toolKitIcon = [
@@ -15,6 +18,8 @@ const toolKitIcon = [
 const isHeaderVisible = ref(false);
 const animatedSections = ref(new Set<string>());
 
+// https://devapp-new.vercel.app/
+
 const works = [
   {
     id: 1,
@@ -25,7 +30,7 @@ const works = [
     role: "Contract",
     description:
       "I built the complete frontend architecture, styling, and component logic. API connectivity was implemented by a backend developer I collaborated with.",
-    languages: ["Vue.js", "Vuetify", "Typescript"],
+    languages: ["Vue", "Vuetify", "Typescript"],
     icons: ["devicon:vuejs", "devicon:vuetify", "devicon:typescript"],
     img: "/img/buySimply.png",
     link: "https://web.buysimply.app/",
@@ -38,11 +43,29 @@ const works = [
     title: "Frontend Developer",
     role: "Contract",
     description:
-      "I built the complete frontend architecture, styling, and component logic.",
-    languages: ["Vue.js", "Vuetify", "Typescript"],
+      "I built the complete frontend architecture, styling, and component logic also connected the api.",
+    languages: ["Vue", "Vuetify", "Typescript"],
     icons: ["devicon:vuejs", "devicon:vuetify", "devicon:typescript"],
     img: "/img/trift.png",
     link: "https://play.google.com/store/apps/details?id=com.playthriftowin",
+  },
+  {
+    id: 3,
+    company: "E skool",
+    location: "Lagos, Nigeria",
+    year: "2022",
+    title: "Frontend Developer",
+    role: "Contract",
+    description:
+      "I built the complete frontend architecture, styling, and component logic.",
+    languages: ["React", "Tailwind", "Typescript"],
+    icons: [
+      "vscode-icons:file-type-reactjs",
+      "devicon:tailwindcss",
+      "devicon:typescript",
+    ],
+    img: "/img/eskool.png",
+    link: "https://www.results.eskoolnow.com/",
   },
 ] as IsWork[];
 
@@ -83,7 +106,13 @@ onMounted(() => {
         >Ohhjee</a
       >
       <div>
-        <iconify icon="fluent-mdl2:work" class="tw:text-blue-400 tw:size-6" />
+        <router-link to="#" class="tw:flex tw:cursor-pointer tw:items-center">
+          <iconify
+            icon="ph:briefcase-fill"
+            class="tw:text-blue-400 tw:size-6"
+          />
+          <span class="tw:link">Project</span>
+        </router-link>
       </div>
     </div>
 
@@ -177,7 +206,7 @@ onMounted(() => {
           class="tw:text-lg tw:bg-white/5 tw:w-fit tw:py-4 tw:px-10 tw:rounded-2xl tw:last:col-span-1 tw:hover:shadow-[0px_0px_5px] tw:hover:shadow-gray-100 tw:hover:transition-all toolkit-item"
           :style="{ '--animation-delay': `${index * 0.5}s` }"
         >
-          <iconify :icon="tools" class="tw:text-white/20 tw:size-8" />
+          <iconify :icon="tools" class="tw:text-white/50 tw:size-8" />
         </div>
       </div>
     </section>
@@ -309,6 +338,7 @@ onMounted(() => {
         </div>
       </div>
     </section>
+    <Footer />
   </div>
 </template>
 
