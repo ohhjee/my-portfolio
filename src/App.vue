@@ -43,7 +43,7 @@ const works = [
     title: "Frontend Developer",
     role: "Contract",
     description:
-      "I built the complete frontend architecture, styling, and component logic also connected the api.",
+      "I built the complete frontend architecture, styling, and component logic. I also connected the api.",
     languages: ["Vue", "Vuetify", "Typescript"],
     icons: ["devicon:vuejs", "devicon:vuetify", "devicon:typescript"],
     img: "/img/trift.png",
@@ -68,6 +68,27 @@ const works = [
     link: "https://www.results.eskoolnow.com/",
   },
 ] as IsWork[];
+
+const contacts = [
+  {
+    id: 1,
+    name: "Github",
+    icon: "ri:github-fill",
+    link: "https://github.com/ohhjee",
+  },
+  {
+    id: 2,
+    name: "LinkedIn",
+    icon: "uil:linkedin",
+    link: "https://www.linkedin.com/in/orotunji-gbenga",
+  },
+  {
+    id: 3,
+    name: "Email",
+    icon: "ri:github-fill",
+    link: "mailto:orotunjigbega@gmail.com",
+  },
+];
 
 onMounted(() => {
   isHeaderVisible.value = true;
@@ -338,6 +359,26 @@ onMounted(() => {
         </div>
       </div>
     </section>
+    <div>
+      <span
+        class="tw:inline-flex"
+        v-for="contact in contacts"
+        :key="contact.id"
+      >
+        <a
+          :href="contact.link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="tw:ml-2 tw:inline-flex tw:items-center"
+        >
+          <iconify :icon="contact.icon" class="tw:text-blue-300 tw:size-4" />
+          <span class="tw:ml-2 tw:text-sm">
+            {{ contact.name }}
+            <!-- {{ contact.name }} -->
+          </span>
+        </a>
+      </span>
+    </div>
     <Footer />
   </div>
 </template>
