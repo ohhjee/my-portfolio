@@ -75,18 +75,28 @@ const contacts = [
     name: "Github",
     icon: "ri:github-fill",
     link: "https://github.com/ohhjee",
+    downloadable: false,
   },
   {
     id: 2,
     name: "LinkedIn",
     icon: "uil:linkedin",
     link: "https://www.linkedin.com/in/orotunji-gbenga",
+    downloadable: false,
   },
   {
     id: 3,
     name: "Email",
     icon: "ri:github-fill",
     link: "mailto:orotunjigbega@gmail.com",
+    downloadable: false,
+  },
+  {
+    id: 4,
+    name: "Resume",
+    icon: "ri:github-fill",
+    link: "demand.pdf",
+    downloadable: true,
   },
 ];
 
@@ -117,7 +127,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="tw:max-sm:p-4 tw:min-sm:max-w-8/12 tw:mx-auto">
+  <div class="tw:max-md:p-4 tw:min-md:max-w-8/12 tw:mx-auto">
     <!-- Header with load animation -->
     <div
       class="tw:flex tw:items-center tw:justify-between tw:py-3"
@@ -139,7 +149,7 @@ onMounted(() => {
 
     <!-- Intro section with scroll animation -->
     <div class="tw:mt-16" data-section="intro">
-      <div class="tw:flex tw:items-center">
+      <div class="tw:inline-flex tw:items-center">
         <span class="tw:text-lg tw:font-underdog">Hello</span>
         <span class="tw:ml-2">
           <iconify
@@ -173,8 +183,11 @@ onMounted(() => {
       <div
         class="tw:gap-4 tw:flex tw:items-center tw:min-lg:flex-row tw:max-lg:flex-col tw:w-full"
       >
-        <div class="tw:rounded-full tw:size-40 tw:overflow-hidden tw:avatar">
-          <img src="https://loremflickr.com/320/240/dog" class="tw:size-full" />
+        <div class="tw:rounded-full tw:size-60 tw:overflow-hidden tw:avatar">
+          <img
+            src="/profile/1.jpg"
+            class="tw:size-full tw:object-top tw:object-contain tw:overflow-hidden"
+          />
         </div>
         <div
           class="tw:min-sm:text-lg tw:text-sm tw:max-w-sm tw:max-md:text-center"
@@ -368,6 +381,7 @@ onMounted(() => {
         <a
           :href="contact.link"
           target="_blank"
+          :download="contact.downloadable ? contact.link : false"
           rel="noopener noreferrer"
           class="tw:ml-2 tw:inline-flex tw:items-center"
         >
