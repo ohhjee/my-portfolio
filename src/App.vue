@@ -294,7 +294,7 @@ onMounted(() => {
           <div class="tw:mt-3 tw:inline-flex tw:min-md:hidden">
             <a
               :href="work.link"
-              class="tw:text-blue-300"
+              class="tw:text-blue-300 tw:inline-flex tw:items-center "
               target="_blank"
               rel="noopener noreferrer"
             >
