@@ -291,7 +291,7 @@ onMounted(() => {
               </div>
             </div>
           </div>
-          <div class="tw:mt-3 tw:inline-flex tw:min-md:hidden tw:bg-red-500">
+          <div class="tw:mt-3 tw:inline-flex tw:min-md:hidden tw:relative tw:z-50">
             <a
               :href="work.link"
               class="tw:text-blue-300 tw:inline-flex tw:items-center "
