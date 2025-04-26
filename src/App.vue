@@ -91,13 +91,13 @@ const contacts = [
     link: "mailto:orotunjigbega@gmail.com",
     downloadable: false,
   },
-  // {
- //   id: 4,
- //   name: "Resume",
- //   icon: "ri:github-fill",
- //   link: "demand.pdf",
-  //  downloadable: true,
- // },
+  {
+    id: 4,
+    name: "Resume",
+   icon: "ri:github-fill",
+    link: "Orotunji Oluwagbenga",
+    downloadable: true,
+ },
 ] as IsContact[];
 
 onMounted(() => {
