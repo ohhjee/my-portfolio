@@ -3,7 +3,7 @@ import { onMounted, onUnmounted, ref } from "vue";
 // import { Footer } from "@/components/app";
 
 import { Footer } from "./components/app";
-import type { IsWork } from "@/definition";
+import type { IsWork, IsContact} from "@/definition";
 
 const toolKitIcon = [
   "teenyicons:typescript-outline",
@@ -68,13 +68,7 @@ const works = [
     link: "https://www.results.eskoolnow.com/",
   },
 ] as IsWork[];
-interface IsContact {
-  id:number;
-  name: string;
-  icon:string;
-  link: string;
-  downloadable: boolean
-}
+
 const contacts = [
   {
     id: 1,
