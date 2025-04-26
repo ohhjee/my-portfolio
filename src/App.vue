@@ -298,8 +298,8 @@ onMounted(() => {
               target="_blank"
               rel="noopener noreferrer"
             >
-             <iconify icon="solar:link-outline" width="24" height="24" /> 
-              <span class="tw:link"> link </span>
+             <iconify icon="solar:link-outline" width="16" height="16" /> 
+              <span class="tw:link tw:text-sm"> link </span>
             </a>
           </div>
         </div>
