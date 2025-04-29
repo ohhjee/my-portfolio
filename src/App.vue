@@ -95,7 +95,7 @@ const contacts = [
     id: 4,
     name: "Resume",
    icon: "ri:github-fill",
-    link: "Orotunji Oluwagbenga.pdf",
+    link: "Orotunji Oluwagbenga_resume.pdf",
     downloadable: true,
  },
 ] as IsContact[];
