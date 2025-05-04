@@ -299,7 +299,7 @@ onMounted(() => {
               rel="noopener noreferrer"
             >
              <iconify icon="solar:link-outline" width="16" height="16" /> 
-              <span class="tw:link tw:text-sm"> link </span>
+              <span class="tw:link tw:text-sm tw:capitalize"> link </span>
             </a>
           </div>
         </div>
