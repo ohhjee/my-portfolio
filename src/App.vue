@@ -150,11 +150,11 @@ onMounted(() => {
     <!-- Intro section with scroll animation -->
     <div class="tw:mt-16" data-section="intro">
       <div class="tw:inline-flex tw:items-center">
-        <span class="tw:text-lg tw:font-underdog">Hello</span>
+        <span class="tw:text-xl tw:font-underdog">Hello</span>
         <span class="tw:ml-2">
           <iconify
             icon="mdi:greeting"
-            class="tw:size-4 tw:text-blue-300 tw:animate-wiggle"
+            class="tw:size-5 tw:text-blue-300 tw:animate-wiggle"
           />
         </span>
       </div>
