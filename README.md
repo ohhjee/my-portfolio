@@ -1,5 +1,12 @@
-# Vue 3 + TypeScript + Vite
+# Orotunji Oluwagbenga Portfolio
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Welcome to my portfolio! Below are links to my deployed projects showcasing my work and skills.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## Projects
+
+- **Portfolio link**: [ohhjee](https://ohhjee.netlify.app/)  
+- **Framework**:[Vuejs](https://vuejs.org/)
+- **styling**: [Tailwind](https://tailwindcss.com/)
+- **Deployment**: [Netlify](https://www.netlify.com/)
+
+Feel free to explore the links above to see my projects in action!
