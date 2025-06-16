@@ -15,6 +15,12 @@ const works = [
     icons: ["devicon:vuejs", "devicon:vuetify", "devicon:typescript"],
     img: "/img/buySimply.png",
     link: "https://web.buysimply.app/",
+    keyResponsibilities: [
+      {
+        id: 1,
+        // res:
+      },
+    ],
   },
   {
     id: 2,
