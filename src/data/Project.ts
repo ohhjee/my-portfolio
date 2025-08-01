@@ -20,7 +20,7 @@ export const works = [
       "I built the complete webpage from frontend to backend, styling, component logic and the API connection .",
     languages: ["Reactjs", "Shadcn", "Typescript", "laravel", "inertiajs"],
     icons: [
-      "ri:reactjs-fill",
+      "vscode-icons:file-type-reactjs",
       "simple-icons:shadcnui",
       "devicon:typescript",
       "devicon:laravel",
