@@ -17,7 +17,7 @@ export const works = [
     title: "FullStack Developer",
     role: "Contract",
     description:
-      "I built the complete webpage from frontend to backend, styling, and component logic. API connectivity was implemented by a backend developer I collaborated with.",
+      "I built the complete webpage from frontend to backend, styling, component logic and the API connection .",
     languages: ["Reactjs", "Shadcn", "Typescript", "laravel", "inertiajs"],
     icons: [
       "ri:reactjs-fill",
