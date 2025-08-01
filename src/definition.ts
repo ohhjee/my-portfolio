@@ -10,11 +10,12 @@ export interface IsWork {
   icons: string[];
   img?: string;
   link?: string;
+  contribution: string[] | null[];
 }
 export interface IsContact {
-  id:number;
+  id: number;
   name: string;
-  icon:string;
+  icon: string;
   link: string;
-  downloadable: boolean
+  downloadable: boolean;
 }

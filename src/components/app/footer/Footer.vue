@@ -34,7 +34,7 @@ const contacts = [
 </script>
 <template>
   <footer>
-    <div>
+    <div class="tw:mt-4">
       <span
         class="tw:inline-flex"
         v-for="contact in contacts"

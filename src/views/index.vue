@@ -2,8 +2,7 @@
 import { onMounted, onUnmounted, ref } from "vue";
 // import { Footer } from "@/components/app";
 
-import type { IsWork } from "@/definition";
-
+import { works } from "@/data/Project";
 const toolKitIcon = [
   "teenyicons:typescript-outline",
   "famicons:logo-laravel",
@@ -19,55 +18,7 @@ const animatedSections = ref(new Set<string>());
 
 // https://devapp-new.vercel.app/
 
-const works = [
-  {
-    id: 1,
-    company: "Buysimply",
-    location: "Lagos, Nigeria",
-    year: "2024",
-    title: "Frontend Developer",
-    role: "Contract",
-    description:
-      "I built the complete frontend architecture, styling, and component logic. API connectivity was implemented by a backend developer I collaborated with.",
-    languages: ["Vue", "Vuetify", "Typescript"],
-    icons: ["devicon:vuejs", "devicon:vuetify", "devicon:typescript"],
-    img: "/img/buySimply.png",
-    link: "https://web.buysimply.app/",
-  },
-  {
-    id: 2,
-    company: "TriftToWin",
-    location: "Lagos, Nigeria",
-    year: "2024",
-    title: "Frontend Developer",
-    role: "Contract",
-    description:
-      "I built the complete frontend architecture, styling, and component logic. I also connected the api.",
-    languages: ["Vue", "Vuetify", "Typescript"],
-    icons: ["devicon:vuejs", "devicon:vuetify", "devicon:typescript"],
-    img: "/img/trift.png",
-    link: "https://play.google.com/store/apps/details?id=com.playthriftowin",
-  },
-  {
-    id: 3,
-    company: "E skool",
-    location: "Lagos, Nigeria",
-    year: "2022",
-    title: "Frontend Developer",
-    role: "Contract",
-    description:
-      "I built the complete frontend architecture, styling, and component logic.",
-    languages: ["React", "Tailwind", "Typescript"],
-    icons: [
-      "vscode-icons:file-type-reactjs",
-      "devicon:tailwindcss",
-      "devicon:typescript",
-    ],
-    img: "/img/eskool.png",
-    link: "https://www.results.eskoolnow.com/",
-  },
-] as IsWork[];
-
+const firstThree = works.slice(0, 3);
 onMounted(() => {
   isHeaderVisible.value = true;
   const observer = new IntersectionObserver(
@@ -78,7 +29,7 @@ onMounted(() => {
           if (sectionId && !animatedSections.value.has(sectionId)) {
             entry.target.classList.add("animate-section");
             animatedSections.value.add(sectionId);
-            observer.unobserve(entry.target); // Ensure animation happens only once
+            observer.unobserve(entry.target);
           }
         }
       });
@@ -210,48 +161,52 @@ onMounted(() => {
       >
         Projects
       </div>
-      <div
-        class="tw:grid tw:min-lg:grid-cols-2 tw:gap-4 tw:my-12 tw:last:my-0 tw:group work-item"
-        v-for="(work, index) in works"
-        :key="index"
-        :style="{ '--animation-delay': `${index * 0.5}s` }"
-      >
-        <!-- Card Section -->
-        <div>
-          <div
-            class="tw:bg-white tw:p-2 tw:relative tw:min-md:overflow-hidden tw:hover:min-md:shadow-xl tw:rounded-lg tw:transition-transform tw:duration-300 tw:h-64 tw:group/card"
-          >
-            <div class="tw:overflow-hidden tw:h-full">
-              <img
-                :src="work.img"
-                alt=""
-                class="tw:h-full tw:object-contain tw:w-full"
-              />
-            </div>
+      <div>
+        <div
+          class="tw:grid tw:min-lg:grid-cols-5 tw:gap-4 tw:my-12 tw:last:my-0 tw:group work-item"
+          v-for="(work, index) in firstThree"
+          :key="index"
+          :style="{ '--animation-delay': `${index * 0.5}s` }"
+        >
+          <!-- Card Section -->
+          <div class="tw:w-fit tw:min-lg:col-span-2">
             <div
-              class="tw:min-md:absolute tw:h-full tw:w-full tw:bg-black/50 tw:top-0 tw:left-0 tw:group-hover/card:min-md:opacity-100 tw:opacity-0 tw:transition-opacity tw:duration-300 tw:overflow-hidden"
+              class="tw:bg-white tw:w-fit tw:p-2 tw:relative tw:min-md:overflow-hidden tw:hover:min-md:shadow-xl tw:rounded-lg tw:transition-transform tw:duration-300 tw:h-full tw:xl:h-60 tw:group/card"
             >
-              <div class="tw:flex tw:items-center tw:justify-center tw:h-full">
+              <div class="tw:overflow-hidden tw:h-full">
+                <img
+                  :src="work.img"
+                  alt=""
+                  class="tw:h-full tw:object-contain tw:w-full"
+                />
+              </div>
+              <div
+                class="tw:min-md:absolute tw:h-full tw:max-md:hidden tw:w-full tw:bg-black/50 tw:top-0 tw:left-0 tw:group-hover/card:min-md:opacity-100 tw:opacity-0 tw:transition-opacity tw:duration-300 tw:overflow-hidden"
+              >
                 <div
-                  class="tw:ring-2 tw:ring-lightblue tw:p-1 tw:rounded-full tw:z-10 tw:transition-all tw:duration-300"
+                  class="tw:flex tw:items-center tw:justify-center tw:h-full"
                 >
-                  <a
-                    :href="work.link"
-                    target="_blank"
-                    class="tw:group-hover/card:pointer-events-auto tw:pointer-events-none"
+                  <div
+                    class="tw:ring-2 tw:ring-lightblue tw:p-1 tw:rounded-full tw:z-10 tw:transition-all tw:duration-300"
                   >
-                    <iconify
-                      icon="mdi:arrow-up"
-                      width="30"
-                      height="30"
-                      class="tw:bg-lightblue tw:rounded-full tw:group-hover/card:bg-blue-200 tw:transition-transform tw:duration-300 tw:rotate-45"
-                    />
-                  </a>
+                    <a
+                      :href="work.link"
+                      target="_blank"
+                      class="tw:group-hover/card:pointer-events-auto tw:pointer-events-none"
+                    >
+                      <iconify
+                        icon="mdi:arrow-up"
+                        width="30"
+                        height="30"
+                        class="tw:bg-lightblue tw:rounded-full tw:group-hover/card:bg-blue-200 tw:transition-transform tw:duration-300 tw:rotate-45"
+                      />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="tw:mt-3 tw:inline-flex tw:min-md:hidden">
+          <div class="tw:inline-flex tw:min-md:hidden">
             <a
               :href="work.link"
               class="tw:text-blue-300"
@@ -265,74 +220,78 @@ onMounted(() => {
               />
             </a>
           </div>
-        </div>
-
-        <!-- Content Section -->
-        <div class="tw:group/card">
-          <!-- Card Header -->
-          <div
-            class="card-header tw:flex tw:items-center tw:gap-2 tw:text-sm tw:group/header"
-          >
+          <!-- Content Section -->
+          <div class="tw:group/card tw:min-lg:col-span-3">
+            <!-- Card Header -->
             <div
-              class="title hover:tw:text-blue-600 tw:transition-colors tw:duration-200"
+              class="card-header tw:flex tw:items-center tw:gap-2 tw:text-sm tw:group/header"
             >
-              {{ work.company }}
-            </div>
-            <div
-              class="location tw:bg-lightblue tw:rounded tw:p-1 tw:text-xs tw:text-black tw:capitalize group-hover/header:tw:bg-blue-200 tw:transition-all tw:duration-200"
-            >
-              {{ work.location }}
-            </div>
-            <div
-              class="year group-hover/header:tw:text-blue-600 tw:transition-colors tw:duration-200"
-            >
-              | {{ work.year }}
-            </div>
-          </div>
-
-          <!-- Card Role -->
-          <div
-            class="card-role tw:flex tw:items-center tw:gap-2 tw:text-sm tw:mt-2 group/role"
-          >
-            <div
-              class="title hover:tw:text-blue-600 tw:transition-colors tw:duration-200"
-            >
-              {{ work.title }}
-            </div>
-            <div
-              class="year group-hover/role:tw:text-blue-600 tw:transition-colors tw:duration-200"
-            >
-              | {{ work.role }}
-            </div>
-          </div>
-
-          <!-- Card Body -->
-          <div class="card-body">
-            <div
-              class="hover:tw:text-gray-800 tw:transition-colors tw:duration-200 tw:my-4"
-            >
-              {{ work.description }}
-            </div>
-
-            <!-- Card Language Tags -->
-            <div
-              class="card-language tw:space-x-3 tw:max-sm:space-y-4 group/lang"
-            >
-              <span
-                v-for="(lang, i) in work.languages"
-                :key="i"
-                class="tw:border tw:border-lightblue tw:rounded tw:px-2 tw:py-1 tw:text-xs tw:inline-flex tw:items-center tw:gap-2 tw:font-bold tw:whitespace-nowrap hover:tw:bg-blue-100 hover:tw:border-blue-400 tw:transition-all tw:duration-200"
+              <div
+                class="title hover:tw:text-blue-600 tw:transition-colors tw:duration-200"
               >
-                <iconify
-                  :icon="work.icons[i]"
-                  class="group-hover/lang:tw:scale-125 tw:transition-transform tw:duration-200"
-                />
-                <span>
-                  {{ lang }}
+                {{ work.company }}
+              </div>
+              <div
+                class="location tw:bg-lightblue tw:rounded tw:p-1 tw:text-xs tw:text-black tw:capitalize group-hover/header:tw:bg-blue-200 tw:transition-all tw:duration-200"
+              >
+                {{ work.location }}
+              </div>
+              <div
+                class="year group-hover/header:tw:text-blue-600 tw:transition-colors tw:duration-200"
+              >
+                | {{ work.year }}
+              </div>
+            </div>
+            <!-- Card Role -->
+            <div
+              class="card-role tw:flex tw:items-center tw:gap-2 tw:text-sm tw:mt-2 group/role"
+            >
+              <div
+                class="title hover:tw:text-blue-600 tw:transition-colors tw:duration-200"
+              >
+                {{ work.title }}
+              </div>
+              <div
+                class="year group-hover/role:tw:text-blue-600 tw:transition-colors tw:duration-200"
+              >
+                | {{ work.role }}
+              </div>
+            </div>
+            <!-- Card Body -->
+            <div class="card-body">
+              <div
+                class="hover:tw:text-gray-800 tw:transition-colors tw:duration-200 tw:my-4"
+              >
+                {{ work.description }}
+              </div>
+              <!-- Card Language Tags -->
+              <div
+                class="card-language tw:space-x-3 tw:max-sm:space-y-4 group/lang"
+              >
+                <span
+                  v-for="(lang, i) in work.languages"
+                  :key="i"
+                  class="tw:border tw:border-lightblue tw:rounded tw:px-2 tw:py-1 tw:text-xs tw:inline-flex tw:items-center tw:gap-2 tw:font-bold tw:whitespace-nowrap hover:tw:bg-blue-100 hover:tw:border-blue-400 tw:transition-all tw:duration-200"
+                >
+                  <iconify
+                    :icon="work.icons[i]"
+                    class="group-hover/lang:tw:scale-125 tw:transition-transform tw:duration-200"
+                  />
+                  <span>
+                    {{ lang }}
+                  </span>
                 </span>
-              </span>
+              </div>
             </div>
           </div>
+        </div>
+        <div>
+          <router-link
+            to="/project"
+            class="tw:btn tw:btn-primary tw:link"
+          >
+            {{ firstThree.length >= 3 ? "See more project" : "" }}
+          </router-link>
         </div>
       </div>
     </section>

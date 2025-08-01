@@ -42,7 +42,7 @@ onMounted(() => {
         >Ohhjee</router-link
       >
       <div>
-        <!-- <router-link
+        <router-link
           :to="{ name: 'Project.index' }"
           class="tw:flex tw:cursor-pointer tw:items-center"
         >
@@ -51,7 +51,7 @@ onMounted(() => {
             class="tw:text-blue-400 tw:size-6"
           />
           <span class="tw:link">Project</span>
-        </router-link> -->
+        </router-link>
       </div>
     </div>
 
