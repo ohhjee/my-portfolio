@@ -82,7 +82,7 @@ onMounted(() => {
 
     <!-- Avatar section with scroll animation -->
     <div
-      class="tw:my-20 tw:flex tw:items-start tw:justify-between tw:gap-10"
+      class="tw:my-5 tw:flex tw:items-start tw:justify-between tw:gap-10"
       data-section="avatar"
     >
       <div
