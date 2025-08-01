@@ -288,7 +288,7 @@ onMounted(() => {
         <div>
           <router-link
             to="/project"
-            class="tw:btn tw:btn-primary tw:link"
+            class="tw:btn tw:bg-blue-200 tw:text-black tw:text-xs"
           >
             {{ firstThree.length >= 3 ? "See more project" : "" }}
           </router-link>
