@@ -46,10 +46,10 @@ onMounted(() => {
           :to="{ name: 'Project.index' }"
           class="tw:flex tw:cursor-pointer tw:items-center"
         >
-          <iconify
+          <!-- <iconify
             icon="ph:briefcase-fill"
             class="tw:text-blue-400 tw:size-6"
-          />
+          /> -->
           <span class="tw:link">Project</span>
         </router-link>
       </div>
