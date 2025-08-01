@@ -27,7 +27,7 @@ export const works = [
       "devicon:inertiajs",
     ],
     img: "/img/jbl.png",
-    link: "https://web.buysimply.app/",
+    link: "https://www.jlb.techskool.org/",
     contribution: projects
       ? [
           "I built the Frontend using Reactjs, Tailwind and shadcn ui and React Router",
