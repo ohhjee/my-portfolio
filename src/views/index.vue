@@ -75,7 +75,7 @@ onMounted(() => {
           A Web Developer
         </div>
         <div class="tw:min-sm:text-lg tw:text-xs">
-          Full-stack Developer specializing in Vue.js & Laravel.
+          Full-stack Developer specializing in Vue.js, Reactjs & Laravel.
         </div>
       </div>
     </div>
@@ -108,7 +108,8 @@ onMounted(() => {
       <div class="tw:min-sm:text-lg tw:text-sm">
         I craft seamless, user-focused web applications by blending dynamic
         front-ends with robust backends. With expertise in
-        <span class="tw:text-lightblue tw:font-bold tw:link">Vue.js</span> for
+        <span class="tw:text-lightblue tw:font-bold tw:link">Vue.js</span> and
+        <span class="tw:text-lightblue tw:font-bold tw:link">Reactjs</span> for
         building
         <span class="tw:text-lightblue tw:font-bold tw:link"> intuitive</span>,
         <span class="tw:text-lightblue tw:font-bold tw:link"
@@ -290,7 +291,7 @@ onMounted(() => {
             to="/project"
             class="tw:btn tw:bg-blue-200 tw:text-black tw:text-xs"
           >
-            {{ firstThree.length >= 3 ? "See more project" : "" }}
+            {{ firstThree.length >= 3 ? "See more projects" : "" }}
           </router-link>
         </div>
       </div>

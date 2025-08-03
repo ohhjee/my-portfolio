@@ -2,9 +2,7 @@
 import { works } from "@/data/Project";
 import { ref } from "vue";
 
-// Create reactive state for expanded items
 const expandedItems = ref<{ [key: number]: boolean }>({});
-
 const toggleReadMore = (index: number) => {
   expandedItems.value[index] = !expandedItems.value[index];
 };

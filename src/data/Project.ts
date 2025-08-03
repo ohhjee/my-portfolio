@@ -2,12 +2,9 @@ import type { IsWork } from "@/definition";
 import { useRoute } from "vue-router";
 let route = useRoute();
 const projects = true;
-// console.log(route?.path);
-
 if (route?.path === "/project") {
   projects;
 }
-
 export const works = [
   {
     id: 1,
