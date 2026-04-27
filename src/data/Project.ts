@@ -8,6 +8,42 @@ if (route?.path === "/project") {
 export const works = [
   {
     id: 1,
+    company: "HandyPal",
+    location: "Lagos, Nigeria",
+    year: "2025 - 2026",
+    title: "FullStack Developer",
+    role: "full-time",
+    description:
+      "HandyPal is a modern web-based platform designed to connect users with skilled service providers for everyday tasks such as home repairs, maintenance, and other on-demand services. The application streamlines the process of finding reliable professionals by offering an intuitive interface where users can browse services, view provider details, and book appointments. The platform focuses on user convenience and efficiency, featuring a clean and responsive design that ensures accessibility across devices. Users can easily navigate through available services, select their preferred provider, and schedule jobs without unnecessary complexity.On the provider side, HandyPal enables service professionals to showcase their skills, manage availability, and receive booking requests, creating a two-sided marketplace that benefits both customers and workers.",
+    languages: [
+      "Reactjs",
+      "Shadcn",
+      "Typescript",
+      "Tanstack",
+      "Prisma",
+      "PostgreSQL",
+    ],
+    icons: [
+      "vscode-icons:file-type-reactjs",
+      "simple-icons:shadcnui",
+      "devicon:typescript",
+      "devicon:prisma",
+      "devicon:postgresql",
+    ],
+    img: "/img/handypal.png",
+    link: "https://handypal.vercel.app/",
+    contribution: projects
+      ? [
+          "User-friendly interface for browsing and booking services",
+          "Responsive design for mobile and desktop users",
+          "Service provider profiles with relevant details",
+          "Seamless booking workflow",
+          "Scalable structure for adding more services and features",
+        ]
+      : null,
+  },
+  {
+    id: 2,
     company: "TechSkool",
     location: "Port Harcourt, Nigeria",
     year: "2025",
@@ -36,7 +72,7 @@ export const works = [
       : null,
   },
   {
-    id: 2,
+    id: 3,
     company: "Buysimply",
     location: "Lagos, Nigeria",
     year: "2024",
@@ -60,7 +96,7 @@ export const works = [
       : null,
   },
   {
-    id: 3,
+    id: 4,
     company: "TriftToWin",
     location: "Lagos, Nigeria",
     year: "2024",
@@ -80,7 +116,7 @@ export const works = [
       : null,
   },
   {
-    id: 4,
+    id: 5,
     company: "E skool",
     location: "Lagos, Nigeria",
     year: "2022",
