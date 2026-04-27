@@ -28,6 +28,7 @@ export const works = [
       "vscode-icons:file-type-reactjs",
       "simple-icons:shadcnui",
       "devicon:typescript",
+      "simple-icons:tanstack",
       "devicon:prisma",
       "devicon:postgresql",
     ],
